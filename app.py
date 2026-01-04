@@ -23,7 +23,7 @@ HTML = """
 </head>
 <body>
   <div class="card">
-    <h2>Encrypted Money Code Likes Bot</h2>
+    <h2>MONEY FORBIDDEN COMPASS LIKE BOT</h2>
     <p>Paste TikTok video links (1 per line):</p>
     <form method="post">
       <textarea name="links">{{links}}</textarea>
@@ -59,4 +59,5 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
