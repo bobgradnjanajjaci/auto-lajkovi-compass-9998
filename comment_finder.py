@@ -4,7 +4,7 @@ import requests
 
 HEADERS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
 
-REQUIRED_WORDS = ["encrypted", "money"]
+REQUIRED_WORDS = ["money", "forbidden", "compass",  ]
 
 REQUEST_TIMEOUT = 6
 MAX_PAGES = 3
@@ -125,3 +125,4 @@ def find_target_comment(video_url: str) -> dict:
             time.sleep(RETRY_DELAY)
 
     return {"found": False, "reason": "no_match"}
+
