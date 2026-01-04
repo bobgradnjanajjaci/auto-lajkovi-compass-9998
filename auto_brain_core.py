@@ -23,12 +23,14 @@ def process_video(video_url: str):
         return {"status": "ok", "message": "Dovoljno lajkova"}
 
     payload = {
-        "key": API_KEY,
-        "action": "add",
-        "service": SERVICE_ID,
-        "link": result["comment_link"],
-        "quantity": to_send
-    }
+    "key": API_KEY,
+    "action": "add",
+    "service": SERVICE_ID,
+    "link": result["comment_link"],
+    "quantity": to_send,
+    "username": result["username"]  # 👈 KLJUČNO
+}
+
 
     try:
         r = requests.post(PANEL_URL, data=payload, timeout=25)
